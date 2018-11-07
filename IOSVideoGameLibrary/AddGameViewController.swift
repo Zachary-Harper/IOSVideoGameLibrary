@@ -10,6 +10,8 @@ import UIKit
 
 class AddGameViewController : UIViewController {
     
+    let library = Library.sharedInstance
+    
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -18,6 +20,12 @@ class AddGameViewController : UIViewController {
     
     @IBOutlet weak var ratingSegmentedControl: UISegmentedControl!
    
+    @IBAction func saveGameButtonTappes(_ sender: Any) {
+        
+        trySavingGame()
+    }
+    
+
     
     let segments: [(title: String, rating: Game.Rating)] =
         [("K", .kids),
@@ -41,22 +49,30 @@ class AddGameViewController : UIViewController {
         for (index, segment) in segments.enumerated() {
             ratingSegmentedControl.insertSegment(withTitle: segment.title, at: index, animated: false)
         }
+        self.genrePickerView.delegate = self
+        self.genrePickerView.dataSource = self
+        
     }
     
     
     func trySavingGame() {
         
-        // title
+        //title
         guard let title = titleTextField.text else { return }
         
-        // details
+        //description
         guard let details = descriptionTextView.text else { return }
         
-        // rating
+        //rating
         let rating = segments[ratingSegmentedControl.selectedSegmentIndex].rating
         
-        // genre
-        let genre = genrePickerView.selectedRow
+        //genre
+        let genre = genres[genrePickerView.selectedRow(inComponent: genres.count)].genre
+        
+        
+
+        library.games.append(Game(title: title, genre: genre, description: details, rating: rating))
+        
 }
     
 }

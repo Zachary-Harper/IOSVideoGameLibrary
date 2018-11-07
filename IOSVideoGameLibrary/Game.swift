@@ -8,6 +8,9 @@
 
 import UIKit
 
+import DZNEmptyDataSet
+
+
 class Game {
     
     
@@ -54,11 +57,11 @@ class Game {
         case checkedIn
         case checkedOut(dueDate: Date)
     }
-    let title: String
-    let rating: Rating
-    let genre: Genre
-    let description : String
-    let available : Availability
+     let title: String
+     let rating: Rating
+     let genre: Genre
+     let description : String
+     var available : Availability
     
     init(title: String, genre: Genre, description: String, rating: Rating) {
         self.title = title

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55669B1EBAFE10B242C0E356 /* Pods_IOSVideoGameLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDEDB2EB8F8EBA610988DA8 /* Pods_IOSVideoGameLibrary.framework */; };
 		8335574321875CD300331AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8335574221875CD300331AF0 /* AppDelegate.swift */; };
 		8335574821875CD300331AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335574621875CD300331AF0 /* Main.storyboard */; };
 		8335574A21875CD300331AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8335574921875CD300331AF0 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B82F0F304BD681C60B14813 /* Pods-IOSVideoGameLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSVideoGameLibrary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSVideoGameLibrary/Pods-IOSVideoGameLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		36795781F7E2456F0AD962EF /* Pods-IOSVideoGameLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSVideoGameLibrary.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSVideoGameLibrary/Pods-IOSVideoGameLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		8335573F21875CD300331AF0 /* IOSVideoGameLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSVideoGameLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335574221875CD300331AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8335574721875CD300331AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		8335575821877D1400331AF0 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		835E2AC3218B537F0057DED3 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		83C83CAC218A33C000309B67 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
+		DBDEDB2EB8F8EBA610988DA8 /* Pods_IOSVideoGameLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSVideoGameLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55669B1EBAFE10B242C0E356 /* Pods_IOSVideoGameLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				8335574121875CD300331AF0 /* IOSVideoGameLibrary */,
 				8335574021875CD300331AF0 /* Products */,
+				DB5689E7240D5AC5533D6822 /* Pods */,
+				EE8D5A200823B1A2B3B17CF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,23 @@
 			path = IOSVideoGameLibrary;
 			sourceTree = "<group>";
 		};
+		DB5689E7240D5AC5533D6822 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B82F0F304BD681C60B14813 /* Pods-IOSVideoGameLibrary.debug.xcconfig */,
+				36795781F7E2456F0AD962EF /* Pods-IOSVideoGameLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE8D5A200823B1A2B3B17CF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDEDB2EB8F8EBA610988DA8 /* Pods_IOSVideoGameLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8335575121875CD300331AF0 /* Build configuration list for PBXNativeTarget "IOSVideoGameLibrary" */;
 			buildPhases = (
+				FBB5A3A43FE954D6E11034DE /* [CP] Check Pods Manifest.lock */,
 				8335573B21875CD300331AF0 /* Sources */,
 				8335573C21875CD300331AF0 /* Frameworks */,
 				8335573D21875CD300331AF0 /* Resources */,
+				14DC4F29ADD027DB55373200 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +167,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14DC4F29ADD027DB55373200 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IOSVideoGameLibrary/Pods-IOSVideoGameLibrary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IOSVideoGameLibrary/Pods-IOSVideoGameLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB5A3A43FE954D6E11034DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOSVideoGameLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8335573B21875CD300331AF0 /* Sources */ = {
@@ -296,6 +365,7 @@
 		};
 		8335575221875CD300331AF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B82F0F304BD681C60B14813 /* Pods-IOSVideoGameLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +383,7 @@
 		};
 		8335575321875CD300331AF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36795781F7E2456F0AD962EF /* Pods-IOSVideoGameLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

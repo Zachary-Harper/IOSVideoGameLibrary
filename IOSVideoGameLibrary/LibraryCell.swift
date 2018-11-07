@@ -19,13 +19,14 @@ class LibraryCell : UITableViewCell {
     @IBOutlet weak var availibilityView: UIView!
     
     
+    
     func setup(game : Game) {
         
         titleLabel.text = game.title
         
         genreLabel.text = game.genre.rawValue
         
-        ratingLabel.text = game.genre.symbol
+        ratingLabel.text = game.rating.rawValue
         
         
         switch game.available {
