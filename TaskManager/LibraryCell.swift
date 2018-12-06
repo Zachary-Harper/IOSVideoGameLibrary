@@ -20,23 +20,19 @@ class LibraryCell : UITableViewCell {
     
     
     
-    func setup(game : Game) {
+    func setup(task: Task) {
         
-        titleLabel.text = game.title
-        
-        genreLabel.text = game.genre.rawValue
-        
-        ratingLabel.text = game.rating.rawValue
+        titleLabel.text = task.title
         
         
-        switch game.available {
+        switch task.available {
         
-        case .checkedIn:
+        case .complete:
             dateLabel.isHidden = true
             
             availibilityView.backgroundColor = .green
            
-        case .checkedOut(let date):
+        case .incomplete(let date):
             dateLabel.isHidden = false
             availibilityView.backgroundColor = .red
             

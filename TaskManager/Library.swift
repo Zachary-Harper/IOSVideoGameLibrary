@@ -12,5 +12,5 @@ class Library {
     //singleton
     static let sharedInstance = Library()
     
-    var games = [Game]()
+    var tasks = [Task]()
 }
